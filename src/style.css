@@ -17,12 +17,10 @@ body {
   
   li {
     color: #1041d6;
-    display: block;
+    list-style: none;
     font-size: 16px;
     font-weight: 400;
-    height: 18px;
-    width: 618px;
-    list-style: none;
+    line-height: 18px;
   }
   .weather-app {
     border: 1px solid #dadada;
