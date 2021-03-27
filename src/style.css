@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
 body {
     font-family: sans-serif;
     background-color: #adb7da;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Scheherazade", Tahoma, Geneva, Verdana, sans-serif;
   }
   h1 {
     color: #b21ec0;
