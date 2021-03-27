@@ -28,7 +28,7 @@ body {
   .weather-app {
     border: 1px solid #dadada;
     padding: 70px;
-    margin: 25px auto;
+    margin: 0 auto;
     max-width: 900px;
     border-radius: 20px;
     background-color: #ded7e6;
