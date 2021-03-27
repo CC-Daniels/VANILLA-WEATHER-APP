@@ -43,11 +43,13 @@ body {
     color: #008080;
   }
   
+  .weather-app-wrapper {
+    max-width: 900px;
+    margin: 30px auto;
+  }
   .weather-app {
     border: 1px solid #dadada;
     padding: 70px;
-    margin: 30px auto;
-    max-width: 900px;
     border: 1px solid #dadde1;
     border-radius: 20px;
     background-color: #ded7e6;
