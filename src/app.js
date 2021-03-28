@@ -42,6 +42,9 @@ function formatDate(date) {
    iconElement.setAttribute("src", 
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);      
   iconElement.setAttribute("alt",response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
+  
     }
   
   function searchCity(city) {
@@ -72,7 +75,7 @@ function formatDate(date) {
     event.preventDefault();
     let FahrenheitTemperature = (14 * 9) / 5 + 32;
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML =  FahrenheitTemperature;
+    temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
   }
   
   function convertToCelsius(event) {
