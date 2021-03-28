@@ -73,11 +73,7 @@ function formatDate(date) {
     let FahrenheitTemperature = (14 * 9) / 5 + 32;
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML =  FahrenheitTemperature;
-
   }
-  let FahrenheitLink = document.querySelector("#fahrenheit-link");
-  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
   
   function convertToCelsius(event) {
     event.preventDefault();
@@ -88,6 +84,9 @@ function formatDate(date) {
   let searchForm = document.querySelector("#search-form");
   searchForm.addEventListener("submit", handleSubmit);
   
+  let FahrenheitLink = document.querySelector("#fahrenheit-link");
+  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
   
