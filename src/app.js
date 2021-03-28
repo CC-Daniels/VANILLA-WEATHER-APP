@@ -68,9 +68,10 @@ function formatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function convertToFahrenheit(event) {
+  function convertToFahrenheitLink(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
+    let FahrenheitLink = document.querySelector("#fahrenheit-link");
+    FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
     temperatureElement.innerHTML = 35;
   }
   
@@ -85,9 +86,6 @@ function formatDate(date) {
   
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
-  
-  let FahrenheitLink = document.querySelector("#fahrenheit-link");
-  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
   
   searchCity("Chicago");
   
