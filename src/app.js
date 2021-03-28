@@ -70,11 +70,12 @@ function formatDate(date) {
   
   function displayFahrenheitTemperature(event) {
     event.preventDefault();
-    let FahrenheitLink = document.querySelector("#fahrenheit-link");
-    let temperatureElement = document.querySelector("#fahrenheit-link");
-    FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-    temperatureElement.innerHTML = 35;
+    let FahrenheitTemperature = (14 * 9) / 5 + 32;
+    alert(FahrenheitTemperature);
   }
+  let FahrenheitLink = document.querySelector("#fahrenheit-link");
+  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
   
   function convertToCelsius(event) {
     event.preventDefault();
