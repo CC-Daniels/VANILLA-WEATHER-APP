@@ -69,4 +69,6 @@ width: 65px;
 }
 .weather-temperature .units {
 position: relative;
+font-size: 16px;
+top: -32px;
 }
