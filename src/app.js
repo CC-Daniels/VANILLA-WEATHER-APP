@@ -44,7 +44,7 @@ function formatDate(date) {
   iconElement.setAttribute("alt",response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
-  
+
     }
   
   function searchCity(city) {
@@ -89,6 +89,9 @@ function formatDate(date) {
   
   let FahrenheitLink = document.querySelector("#fahrenheit-link");
   FahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+  let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
