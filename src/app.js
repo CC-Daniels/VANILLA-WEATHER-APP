@@ -73,21 +73,19 @@ function formatDate(date) {
   
   function displayFahrenheitTemperature(event) {
     event.preventDefault();
-    celsiuslink.classlist.remove("active");
+    celsiusLink.classList.remove("active");
     FahrenheitLink.classList.add("active");
-    let FahrenheitTemperature = (4 * 9) / 5 + 32;
+    let FahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
   }
-  
   function displayCelsiusTemperature(event) {
     event.preventDefault();
     celsiusLink.classList.add("active");
-    FahrenheitLink.classList.response("active");
+    FahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(CelsiusTemperature);
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
-
   let celsiusTemperature = null;
   
   let searchForm = document.querySelector("#search-form");
