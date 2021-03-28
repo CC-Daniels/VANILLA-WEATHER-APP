@@ -82,6 +82,8 @@ function formatDate(date) {
   
   function displayCelsiusTemperature(event) {
     event.preventDefault();
+    celsiusLink.classList.add("active");
+    FahrenheitLink.classList.response("active");
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(CelsiusTemperature);
   }
