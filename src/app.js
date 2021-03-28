@@ -85,7 +85,7 @@ function formatDate(date) {
   searchForm.addEventListener("submit", handleSubmit);
   
   let FahrenheitLink = document.querySelector("#fahrenheit-link");
-  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+  FahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
