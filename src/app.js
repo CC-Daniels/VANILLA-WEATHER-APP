@@ -83,6 +83,8 @@ function formatDate(date) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(CelsiusTemperature);
   }
+
+  let celsiusTemperature = null;
   
   let searchForm = document.querySelector("#search-form");
   searchForm.addEventListener("submit", handleSubmit);
