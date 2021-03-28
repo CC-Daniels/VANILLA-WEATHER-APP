@@ -71,6 +71,7 @@ function formatDate(date) {
   function convertToFahrenheitLink(event) {
     event.preventDefault();
     let FahrenheitLink = document.querySelector("#fahrenheit-link");
+    let temperatureElement = document.querySelector("#temperature");
     FahrenheitLink.addEventListener("click", showFahrenheitLinkTemperature);
     temperatureElement.innerHTML = 35;
   }
