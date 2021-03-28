@@ -27,7 +27,8 @@ function formatDate(date) {
   dateElement.innerHTML = formatDate(currentTime);
 
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/03n.png`);
+  iconElement.setAttribute("src", 
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   
   function displayWeatherCondition(response) {
     document.querySelector("#city").innerHTML = response.data.name;
