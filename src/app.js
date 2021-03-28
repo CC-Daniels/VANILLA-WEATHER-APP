@@ -78,10 +78,10 @@ function formatDate(date) {
     temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
   }
   
-  function convertToCelsius(event) {
+  function displayCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 2;
+    temperatureElement.innerHTML = Math.round(CelsiusTemperature);
   }
   
   let searchForm = document.querySelector("#search-form");
