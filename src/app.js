@@ -86,5 +86,8 @@ function formatDate(date) {
   let currentLocationButton = document.querySelector("#current-location-button");
   currentLocationButton.addEventListener("click", getCurrentLocation);
   
+  let FahrenheitLink = document.querySelector("#fahrenheit-link");
+  FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+  
   searchCity("Chicago");
   
