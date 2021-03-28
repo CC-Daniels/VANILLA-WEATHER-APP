@@ -71,7 +71,9 @@ function formatDate(date) {
   function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let FahrenheitTemperature = (14 * 9) / 5 + 32;
-    alert(FahrenheitTemperature);
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML =  FahrenheitTemperature;
+
   }
   let FahrenheitLink = document.querySelector("#fahrenheit-link");
   FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
