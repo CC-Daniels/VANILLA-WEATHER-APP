@@ -41,7 +41,8 @@ function formatDate(date) {
 
    iconElement.setAttribute("src", 
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);      
-  }
+  iconElement.setAttribute("alt",response.data.weather[0].description);
+    }
   
   function searchCity(city) {
     let apiKey = "b6031a652b4784b105a070ffbe0c5b26";
