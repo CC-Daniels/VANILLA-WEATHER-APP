@@ -27,7 +27,7 @@ body {
   }
 
   .temperature {
-    color: #202124;
+    color: #8290bb;
     font-family: arial, sans-serif;
     font-size: 50px;
     font-weight: 400;
@@ -41,6 +41,9 @@ body {
   
   .humidity {
     color: #008080;
+  }
+  .units {
+    color: #b21ec0;
   }
   
   .weather-app-wrapper {
@@ -56,4 +59,9 @@ body {
   }
 .overview {
   margin-bottom: 20px;
+}
+.weather-temperature img {
+margin-right: 10px;
+height: 65px;
+width: 65px;
 }
