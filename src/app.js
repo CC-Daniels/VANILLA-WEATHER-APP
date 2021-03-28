@@ -68,7 +68,7 @@ function formatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function ShowFahrenheitLink(event) {
+  function showFahrenheitLinkTemperature(event) {
     event.preventDefault();
     let FahrenheitLink = document.querySelector("#fahrenheit-link");
     let temperatureElement = document.querySelector("#fahrenheit-link");
