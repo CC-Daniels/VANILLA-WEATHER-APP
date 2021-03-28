@@ -68,11 +68,11 @@ function formatDate(date) {
     navigator.geolocation.getCurrentPosition(searchLocation);
   }
   
-  function showFahrenheitLinkTemperature(event) {
+  function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let FahrenheitLink = document.querySelector("#fahrenheit-link");
     let temperatureElement = document.querySelector("#fahrenheit-link");
-    FahrenheitLink.addEventListener("click", showFahrenheitLinkTemperature);
+    FahrenheitLink.addEventListener("click", showFahrenheitTemperature);
     temperatureElement.innerHTML = 35;
   }
   
