@@ -27,9 +27,10 @@ function formatDate(date) {
   dateElement.innerHTML = formatDate(currentTime);
  let iconElement = document.querySelector("#icon");
 
-function  displayForecast(response) {
+
+ function displayForecast(response) {
    let forecastElement = document.querySelector("#forecast");
-   console.log(response.data);
+   console.log(response.data.daily);
 
    let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
@@ -50,7 +51,7 @@ function  displayForecast(response) {
    </div>
    </div>`;
  });
- forecastHTML = forecastHTML + `</div>`;
+forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
@@ -58,9 +59,7 @@ forecastElement.innerHTML = forecastHTML;
   console.log(coordinates);
   let apiKey = "b6031a652b4784b105a070ffbe0c5b26";
   let apiUrl =  `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=metric`;
-console.log(apiUrl);
-axios.get(apiUrl).then(displayForecast);
-
+  axios.get(apiUrl).then(displayForecast);
  }
 
 
@@ -80,9 +79,8 @@ axios.get(apiUrl).then(displayForecast);
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);      
   iconElement.setAttribute("alt",response.data.weather[0].description);
 
-  getForecast(response.data.coordinates);
+  getForecast(response.data.coord);
 
-  celsiusTemperature = response.data.main.temp;
     }
   
   function searchCity(city) {
@@ -117,12 +115,17 @@ axios.get(apiUrl).then(displayForecast);
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
   }
+
+
   function displayCelsiusTemperature(event) {
     event.preventDefault();
     celsiusLink.classList.add("active");
     FahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+    celsiusTemperature = response.data.main.temp;
+
   }
   let celsiusTemperature = null;
   
