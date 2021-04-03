@@ -86,10 +86,16 @@ top: -34px;
 .weather-forcast {
   margin-top: 20px;
   text-align: center;
+  color:#b21ec0;
 
 }
-.weather-forecast-date {
+.weather-forecast-date, 
+.weather-forecast-min {
   font-size: 16px;
-  color:#b21ec0;
+  opacity: 0.7;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+
 }
 
