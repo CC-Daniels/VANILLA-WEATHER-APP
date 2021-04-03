@@ -34,6 +34,8 @@ function formatDate(date) {
 
    let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
+  return days[day];
+
    let forecastHTML = `div class="row"`;
    days.forEach(function (day){
      forecastHTML =
@@ -80,7 +82,6 @@ forecastElement.innerHTML = forecastHTML;
   iconElement.setAttribute("alt",response.data.weather[0].description);
 
   getForecast(response.data.coord);
-
     }
   
   function searchCity(city) {
