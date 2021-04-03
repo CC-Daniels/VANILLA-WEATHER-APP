@@ -27,7 +27,7 @@ function formatDate(date) {
   dateElement.innerHTML = formatDate(currentTime);
  let iconElement = document.querySelector("#icon");
 
- function getForecast(coordinates) {
+ function displayForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "b6031a652b4784b105a070ffbe0c5b26";
   let apiUrl =  `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinate.lon}&appid=${apikey}&units=metric`;
@@ -51,7 +51,7 @@ console.log(apiUrl);
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);      
   iconElement.setAttribute("alt",response.data.weather[0].description);
 
-  getForecast(response.data.coords);
+  displayForecast(response.data.coords);
 
   celsiusTemperature = response.data.main.temp;
     }
