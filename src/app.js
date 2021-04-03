@@ -44,11 +44,11 @@ function formatDate(date) {
    </div>
      <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
-       <span class="weather-forecast-min">
-         13°
+       <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
+         °
       </span>
-       <span class="weather-forecast-max">
-         19°
+       <span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}
+         °
        </span>
    </div>
    </div>`;
