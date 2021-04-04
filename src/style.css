@@ -58,7 +58,7 @@ body {
     border: 1px solid #dadada;
     padding: 70px;
     border: 1px solid #dadde1;
-    border-radius: 20px;
+    border-radius: 11px;
     background-color: #ded7e6;
     gap: 2px;
   }
@@ -67,8 +67,8 @@ body {
 }
 .weather-temperature img {
 margin-right: 10px;
-height: 65px;
-width: 65px;
+height: 63px;
+width: 63px;
 }
 .weather-temperature .units {
 position: relative;
