@@ -28,12 +28,13 @@ function formatDate(date) {
  let iconElement = document.querySelector("#icon");
 
  function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
-  console.log(response.data.daily);
-  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day, index) {
-    let forecastDay = response.data.daily[index];
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 6) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
