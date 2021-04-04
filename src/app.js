@@ -35,7 +35,6 @@ function formatDate(date) {
   return days(day);
 }
 
-
  function displayForecast(response) {
  let forecast = response.data.daily;
 
