@@ -37,7 +37,7 @@ function formatDate(date) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-     <div class="weather-forecast-date">${day}</div>
+     <div class="weather-forecast-date">${formatDay(getForecast.dt)}</div>
      <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
        <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
