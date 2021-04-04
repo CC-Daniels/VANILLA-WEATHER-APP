@@ -53,6 +53,7 @@ function formatDate(date) {
    </div>
    </div>`;
  });
+
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
