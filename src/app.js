@@ -28,18 +28,17 @@ function formatDate(date) {
  let iconElement = document.querySelector("#icon");
 
  function displayForecast(response) {
-  let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
-  
+  console.log(response.data.daily);
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   let forecastHTML = `<div class="row">`;
-    forecast.forEach(function (forecastDay, index) {
-      if (index < 6) {
+  days.forEach(function (day, index) {
+    
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-     <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon@2x.png" alt="" width="37" />
+     <div class="weather-forecast-date">${formatDay(getForecast.dt)}</div>
+     <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
        <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
          °
