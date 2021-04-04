@@ -16,7 +16,7 @@ body {
   }
   
   li {
-    color: #1041d6;
+    color: #8290bb;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -55,7 +55,6 @@ body {
     margin: 30px auto;
   }
   .weather-app {
-    border: 1px solid #dadada;
     padding: 70px;
     border: 1px solid #dadde1;
     border-radius: 11px;
