@@ -60,6 +60,7 @@ body {
     border: 1px solid #dadde1;
     border-radius: 20px;
     background-color: #ded7e6;
+    gap: 2px;
   }
 .overview {
   margin-bottom: 20px;
