@@ -87,8 +87,8 @@ function formatDate(date) {
   
   function handleSubmit(event) {
     event.preventDefault();
-    let city = document.querySelector("#city-input").value;
-    searchCity(city);
+    let cityInputEllemt = document.querySelector("#city-input");
+    search(cityInputEllemt.value);
   }
   
   function searchLocation(position) {
