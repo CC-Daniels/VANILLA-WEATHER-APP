@@ -52,6 +52,7 @@ function formatDate(date) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
  function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "b6031a652b4784b105a070ffbe0c5b26";
