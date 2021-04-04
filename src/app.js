@@ -27,13 +27,25 @@ function formatDate(date) {
   dateElement.innerHTML = formatDate(currentTime);
  let iconElement = document.querySelector("#icon");
 
- function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
-  console.log(response.data.daily);
+
+ function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
   let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  return days(day);
+}
+
+
+ function displayForecast(response) {
+ let forecast = response.data.daily;
+
+ let forecastElement = document.querySelector("#forecast"); 
+  
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day, index) {
+  forecast.forEach(function (forecastDay, index) {
+    
     let forecastDay = response.data.daily[index];
+    if (index < 6) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
@@ -48,6 +60,7 @@ function formatDate(date) {
        </span>
    </div>
    </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
