@@ -33,11 +33,11 @@ function formatDate(date) {
   let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day, index) {
-    
+    let forecastDay = response.data.daily[index];
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-     <div class="weather-forecast-date">${formatDay(getForecast.dt)}</div>
+     <div class="weather-forecast-date">${day}</div>
      <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
        <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
