@@ -28,8 +28,8 @@ function formatDate(date) {
  let iconElement = document.querySelector("#icon");
 
 
- function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
+ function formatDay(currentTime) {
+  let date = new Date(currentTime * 1000);
   let day = date.getDay();
   let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   return days(day);
@@ -44,13 +44,12 @@ function formatDate(date) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     
-    let forecastDay = response.data.daily[index];
     if (index < 6) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}01d@2x.png" alt="sun" width="37"/>
+     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
        <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}
          °
