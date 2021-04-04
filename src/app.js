@@ -52,10 +52,10 @@ function formatDate(date) {
      <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}01d@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
-       <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
+       <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}
          °
       </span>
-       <span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}
+       <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}
          °
        </span>
    </div>
