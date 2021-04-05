@@ -27,8 +27,8 @@ function formatDate(date) {
   dateElement.innerHTML = formatDate(currentTime);
  let iconElement = document.querySelector("#icon");
 
- function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
+ function formatDay(currentTime) {
+  let date = new Date(currentTime * 1000);
   let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -37,7 +37,6 @@ function formatDate(date) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
