@@ -34,7 +34,6 @@ function formatDate(date) {
 
    let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
-  return days[day];
 
    let forecastHTML = `div class="row"`;
    days.forEach(function (day){
@@ -53,7 +52,6 @@ function formatDate(date) {
    </div>
    </div>`;
  });
-
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
