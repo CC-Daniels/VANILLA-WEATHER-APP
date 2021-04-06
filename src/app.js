@@ -39,7 +39,7 @@ function formatDate(date) {
       forecastHTML +
       `<div class="col-2">
      <div class="weather-forecast-date">${day}</div>
-     <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="sun" width="37"/>
+     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="sun" width="37"/>
      <div class="weather-forecast-temperatures">
        <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}
          °
