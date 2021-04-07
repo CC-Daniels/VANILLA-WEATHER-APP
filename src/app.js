@@ -31,7 +31,7 @@ function formatDate(date) {
  function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   console.log(response.data.daily);
-  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  let days = [ "MON", "TUE", "WED", "THU", "FRI"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day, index) {
     let forecastDay = response.data.daily[index];
