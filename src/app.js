@@ -78,6 +78,7 @@ function getForecast(coordinates) {
    iconElement.setAttribute("alt",response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  celsiusTemperature = response.data.main.temp;
     }
   
   function searchCity(city) {
@@ -120,10 +121,9 @@ function getForecast(coordinates) {
     FahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
-
-    celsiusTemperature = response.data.main.temp;
-
   }
+  
+
   let celsiusTemperature = null;
   
   let searchForm = document.querySelector("#search-form");
