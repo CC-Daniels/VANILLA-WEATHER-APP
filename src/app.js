@@ -78,6 +78,7 @@ function getForecast(coordinates) {
    iconElement.setAttribute("alt",response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  celsiusTemperature = response.data.main.temp;
     }
   
   function searchCity(city) {
