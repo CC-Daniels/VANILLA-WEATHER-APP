@@ -31,7 +31,7 @@ function formatDate(date) {
  function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   console.log(response.data.daily);
-  let days = [ "MON", "TUE", "WED", "THU", "FRI"];
+  let days = [ "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day, index) {
     let forecastDay = response.data.daily[index];
@@ -110,7 +110,7 @@ function getForecast(coordinates) {
     celsiusLink.classList.remove("active");
     FahrenheitLink.classList.add("active");
     let FahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-    let temperatureElement = document.querySelector("#temperature");
+    let temperatureElement = document.querySelectorAll("#temperature");
     temperatureElement.innerHTML = Math.round(FahrenheitTemperature);
   }
 
@@ -119,8 +119,8 @@ function getForecast(coordinates) {
     event.preventDefault();
     celsiusLink.classList.add("active");
     FahrenheitLink.classList.remove("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    let temperatureElement = document.querySelectorAll("#temperature");
+    temperatureElement.innerHTML = Math.round(((celsiusTemperature - 32) *5) / 9);
   }
   
 
