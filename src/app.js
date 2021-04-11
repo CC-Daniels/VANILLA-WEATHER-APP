@@ -120,7 +120,7 @@ function getForecast(coordinates) {
     celsiusLink.classList.add("active");
     FahrenheitLink.classList.remove("active");
     let temperatureElement = document.querySelectorAll("#temperature");
-    temperatureElement.innerHTML = Math.round(((celsiusTemperature - 32) *5) / 9);
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
   
 
